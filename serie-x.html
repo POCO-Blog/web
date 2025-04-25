@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie M - POCO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .modal-contacto {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 300px;
+            max-width: 90%;
+        }
+
+        .modal-contacto h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .modal-contacto p {
+            margin-bottom: 10px;
+        }
+
+        .modal-contacto button {
+            background-color: #ff4f58;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .modal-contacto button:hover {
+            background-color: #d43d47;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="menu container">
+        <a href="index.html" class="logo">™</a>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="imagenes/menu.png" class="menu-icono" alt="Menú">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#series">Series</a></li>
+                <li><a href="index.html#historia">Historia</a></li>
+                <li><a href="#" id="btn-contacto-header">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-content container">
+        <div class="header-txt">
+            <span>POCO SERIE X</span>
+            <h1>Potencia sin romper tu bolsillo</h1>
+        </div>
+    </div>
+</header>
+
+<section class="plan container">
+    <span>Modelos destacados de la Serie X</span>
+    <h2>Desde el X2 hasta el X7 Pro</h2>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-x2.png" alt="POCO X2">
+            <h3>POCO X2 (2020)</h3>
+            <p>120Hz, Snapdragon 730G, gran pantalla y diseño llamativo.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-x3.png" alt="POCO X3 NFC">
+            <h3>POCO X3 NFC</h3>
+            <p>Snapdragon 732G, 120Hz, batería de 5160 mAh, ideal para gaming.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-x3-pro.png" alt="POCO X3 Pro">
+            <h3>POCO X3 Pro</h3>
+            <p>Snapdragon 860, gran rendimiento para juegos a bajo costo.</p>
+        </div>
+    </div>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-x4-pro.png" alt="POCO X4 Pro">
+            <h3>POCO X4 Pro</h3>
+            <p>AMOLED 120Hz, cámara de 108MP y carga rápida de 67W.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-x5.png" alt="POCO X5">
+            <h3>POCO X5</h3>
+            <p>Snapdragon 778G, pantalla AMOLED, batería de 5000 mAh.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-x5-pro.png" alt="POCO X5 Pro">
+            <h3>POCO X5 Pro</h3>
+            <p>Snapdragon 778G, 108MP, excelente para fotografía y rendimiento diario.</p>
+        </div>
+    </div>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-x6.png" alt="POCO X6">
+            <h3>POCO X6</h3>
+            <p>Snapdragon 7s Gen 2, pantalla 1.5K, rendimiento fluido y moderno.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-x6-pro.png" alt="POCO X6 Pro">
+            <h3>POCO X6 Pro</h3>
+            <p>Dimensity 8300 Ultra, diseño llamativo, Android 14 y gran cámara.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-x7.png" alt="POCO X7">
+            <h3>POCO X7</h3>
+            <p>Dimensity 7300 Ultra, pantalla AMOLED curva y carga rápida 67W.</p>
+        </div>
+    </div>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-x7-pro.png" alt="POCO X7 Pro">
+            <h3>POCO X7 Pro</h3>
+            <p>Dimensity 8400 Ultra, AMOLED, flagship killer con estilo.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="index.html" class="btn-1">⬅ Volver al inicio</a>
+        <a href="index.html#series" class="btn-1" style="margin-top: 40px;">← Volver a Series</a>
+    </div>
+</section>
+
+<div class="overlay" id="overlay"></div>
+    <div class="modal-contacto" id="modal-contacto">
+        <p>📧 Correo: contacto@poco.com</p>
+        <p>📞 Teléfono: +52 71 2102 4747</p>
+        <p>📞 Teléfono: +52 71 2272 0687</p>
+        <p>📍 Ubicación: Edo. de México, MX</p>
+        <button id="cerrar-modal">Cerrar</button>
+    </div>
+
+<footer class="footer">
+    <div class="footer-content container">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#series">Series</a>
+        <a href="index.html#historia">Historia</a>
+        <a href="#" id="btn-contacto-footer">Contacto</a>
+    </div>
+</footer>
+
+<script>
+
+    const btnContactoHeader = document.getElementById('btn-contacto-header');
+    const btnContactoFooter = document.getElementById('btn-contacto-footer');
+    const modalContacto = document.getElementById('modal-contacto');
+    const overlay = document.getElementById('overlay');
+    const cerrarModal = document.getElementById('cerrar-modal');
+
+
+    function mostrarModal() {
+        modalContacto.style.display = 'block'; 
+        overlay.style.display = 'block'; 
+    }
+
+    function cerrarModalContacto() {
+        modalContacto.style.display = 'none';
+        overlay.style.display = 'none'; 
+    }
+
+    btnContactoHeader.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        mostrarModal();
+    });
+
+    btnContactoFooter.addEventListener('click', function(e) {
+        e.preventDefault();
+        mostrarModal();
+    });
+
+    cerrarModal.addEventListener('click', function() {
+        cerrarModalContacto();
+    });
+
+    overlay.addEventListener('click', function() {
+        cerrarModalContacto();
+    });
+</script>
+
+</body>
+</html>

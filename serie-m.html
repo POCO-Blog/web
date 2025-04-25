@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie M - POCO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .modal-contacto {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 300px;
+            max-width: 90%;
+        }
+
+        .modal-contacto h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .modal-contacto p {
+            margin-bottom: 10px;
+        }
+
+        .modal-contacto button {
+            background-color: #ff4f58;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .modal-contacto button:hover {
+            background-color: #d43d47;
+        }
+
+        .overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">™</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#series">Series</a></li>
+                    <li><a href="index.html#historia">Historia</a></li>
+                    <li><a href="#" id="btn-contacto-header">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <span>POCO SERIE M</span>
+                <h1>Modelos POCO para todos los bolsillos</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="plan container">
+        <span>Desde el primero hasta el más reciente</span>
+        <h2>La evolución de la Serie M</h2>
+        <div class="plan-content">
+            <div class="plan-1">
+                <img src="imagenes/poco-m3.png" alt="POCO M3">
+                <h3>POCO M3</h3>
+                <p>Gran batería de 6000 mAh, pantalla FHD+ de 6.53", procesador Snapdragon 662.</p>
+            </div>
+            <div class="plan-1">
+                <img src="imagenes/poco-m4-pro.png" alt="POCO M4 Pro">
+                <h3>POCO M4 Pro</h3>
+                <p>Pantalla AMOLED de 90Hz, cámara de 64 MP, MediaTek Helio G96, 5000 mAh + carga rápida.</p>
+            </div>
+            <div class="plan-1">
+                <img src="imagenes/poco-m5.png" alt="POCO M5">
+                <h3>POCO M5</h3>
+                <p>Chip Helio G99, pantalla de 90Hz, diseño gamer, batería de 5000 mAh.</p>
+            </div>
+            <div class="plan-1">
+                <img src="imagenes/poco-m6-pro.png" alt="POCO M6 Pro">
+                <h3>POCO M6 Pro (2024)</h3>
+                <p>5G, Snapdragon 4 Gen 2, pantalla de 90Hz, diseño premium por precio accesible.</p>
+            </div>
+        </div>
+        <a href="index.html" class="btn-1" style="margin-top: 40px;">← Volver al inicio</a>
+        <a href="index.html#series" class="btn-1" style="margin-top: 40px;">← Volver a Series</a>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal-contacto" id="modal-contacto">
+        <p>📧 Correo: contacto@poco.com</p>
+        <p>📞 Teléfono: +52 71 2102 4747</p>
+        <p>📞 Teléfono: +52 71 2272 0687</p>
+        <p>📍 Ubicación: Edo. de México, MX</p>
+        <button id="cerrar-modal">Cerrar</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#series">Series</a>
+            <a href="index.html#historia">Historia</a>
+            <a href="#" id="btn-contacto-footer">Contacto</a>
+        </div>
+    </footer>
+
+    <script>
+        const btnContactoHeader = document.getElementById('btn-contacto-header');
+        const btnContactoFooter = document.getElementById('btn-contacto-footer');
+        const modalContacto = document.getElementById('modal-contacto');
+        const overlay = document.getElementById('overlay');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        function mostrarModal() {
+            modalContacto.style.display = 'block';
+            overlay.style.display = 'block'; 
+        }
+
+        function cerrarModalContacto() {
+            modalContacto.style.display = 'none'; 
+            overlay.style.display = 'none'; 
+        }
+        btnContactoHeader.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            mostrarModal();
+        });
+
+        btnContactoFooter.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            mostrarModal();
+        });
+
+        cerrarModal.addEventListener('click', function() {
+            cerrarModalContacto();
+        });
+
+        overlay.addEventListener('click', function() {
+            cerrarModalContacto();
+        });
+    </script>
+
+</body>
+</html>

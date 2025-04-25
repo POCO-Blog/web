@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camaras - POCO</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .tabla-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #c6c6c6;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 12px 16px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #ff4f58;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    .btn-volver {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        background-color: #ff4f58;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        width: fit-content;
+    }
+
+    .btn-volver:hover {
+        background-color: #d43c44;
+    }
+
+    .modal-contacto {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 300px;
+            max-width: 90%;
+        }
+
+        .modal-contacto h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .modal-contacto p {
+            margin-bottom: 10px;
+        }
+
+        .modal-contacto button {
+            background-color: #ff4f58;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .modal-contacto button:hover {
+            background-color: #d43d47;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+  </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">™</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="Menú">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#series">Series</a></li>
+                    <li><a href="index.html#historia">Historia</a></li>
+                    <li><a href="#" id="btn-contacto-header">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <span>POCO </span>
+                <h1>Los mejores telefonos en fotografía</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="tabla-container" style="background-color: #eaeaea;">
+        <h1 style="text-align: center;">Top teléfonos POCO por Cámaras</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Cámaras traseras</th>
+              <th>Cámara frontal</th>
+              <th>Fotografía nocturna</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>POCO F7 Ultra</td>
+              <td>64 MP principal (OIS), 8 MP ultra gran angular, 2 MP macro</td>
+              <td>32 MP con IA y modo noche</td>
+              <td>✅ Excelente gracias al sensor grande y OIS</td>
+            </tr>
+            <tr>
+              <td>POCO F7 Pro</td>
+              <td>50 MP Sony IMX890 (OIS), 8 MP ultra gran angular, 2 MP macro</td>
+              <td>20 MP con modo retrato nocturno</td>
+              <td>✅ Muy buena, destacada en escenas con poca luz</td>
+            </tr>
+            <tr>
+              <td>POCO F6 Pro</td>
+              <td>50 MP (OIS), 8 MP ultra gran angular, 2 MP macro</td>
+              <td>16 MP HDR</td>
+              <td>✅ Buena fotografía nocturna con modo noche mejorado</td>
+            </tr>
+            <tr>
+                <td>POCO F4</td>
+                <td>64 MP principal (OIS), 8 MP ultra gran angular, 2 MP macro</td>
+                <td>20 MP</td>
+                <td>✅ Capaz de capturar buenas fotos nocturnas con el modo adecuado</td>
+              </tr>
+            <tr>
+              <td>POCO X6 Pro</td>
+              <td>64 MP (OIS), 8 MP ultra gran angular, 2 MP macro</td>
+              <td>16 MP</td>
+              <td>✅ Destacado por su modo noche automático</td>
+            </tr>
+            <tr>
+              <td>POCO X5 Pro</td>
+              <td>108 MP principal, 8 MP ultra gran angular, 2 MP macro</td>
+              <td>16 MP</td>
+              <td>🟡 Aceptable con buena iluminación artificial</td>
+            </tr>
+            <tr>
+              <td>POCO M6 Pro (5G)</td>
+              <td>50 MP principal, 2 MP profundidad</td>
+              <td>8 MP</td>
+              <td>🟡 Cumple, pero no destaca en baja luz</td>
+            </tr>
+            <tr>
+              <td>POCO C65</td>
+              <td>50 MP principal, 2 MP profundidad</td>
+              <td>8 MP</td>
+              <td>🟡 Limitado en fotografía nocturna</td>
+            </tr>
+          </tbody>
+        </table>
+
+    <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+    <a href="index.html#historia" class="btn-volver">← Volver a Historia</a>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+    <div class="modal-contacto" id="modal-contacto">
+        <p>📧 Correo: contacto@poco.com</p>
+        <p>📞 Teléfono: +52 71 2102 4747</p>
+        <p>📞 Teléfono: +52 71 2272 0687</p>
+        <p>📍 Ubicación: Edo. de México, MX</p>
+        <button id="cerrar-modal">Cerrar</button>
+    </div>
+
+<footer class="footer">
+    <div class="footer-content container">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#series">Series</a>
+        <a href="index.html#historia">Historia</a>
+        <a href="#" id="btn-contacto-footer">Contacto</a>
+    </div>
+</footer>
+
+<script>
+
+    const btnContactoHeader = document.getElementById('btn-contacto-header');
+    const btnContactoFooter = document.getElementById('btn-contacto-footer');
+    const modalContacto = document.getElementById('modal-contacto');
+    const overlay = document.getElementById('overlay');
+    const cerrarModal = document.getElementById('cerrar-modal');
+
+
+    function mostrarModal() {
+        modalContacto.style.display = 'block'; 
+        overlay.style.display = 'block'; 
+    }
+
+    function cerrarModalContacto() {
+        modalContacto.style.display = 'none';
+        overlay.style.display = 'none'; 
+    }
+
+    btnContactoHeader.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        mostrarModal();
+    });
+
+    btnContactoFooter.addEventListener('click', function(e) {
+        e.preventDefault();
+        mostrarModal();
+    });
+
+    cerrarModal.addEventListener('click', function() {
+        cerrarModalContacto();
+    });
+
+    overlay.addEventListener('click', function() {
+        cerrarModalContacto();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie M - POCO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .modal-contacto {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 300px;
+            max-width: 90%;
+        }
+
+        .modal-contacto h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .modal-contacto p {
+            margin-bottom: 10px;
+        }
+
+        .modal-contacto button {
+            background-color: #ff4f58;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .modal-contacto button:hover {
+            background-color: #d43d47;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="menu container">
+        <a href="index.html" class="logo">™</a>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="imagenes/menu.png" class="menu-icono" alt="Menú">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#series">Series</a></li>
+                <li><a href="index.html#historia">Historia</a></li>
+                <li><a href="#" id="btn-contacto-header">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-content container">
+        <div class="header-txt">
+            <span>POCO SERIE F</span>
+            <h1>Innovación con potencia.</h1>
+        </div>
+    </div>
+</header>
+
+<section class="plan container">
+    <span>Modelos destacados de la Serie F</span>
+    <h2>Desde el F1 hasta el F7 Ultra</h2>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-f1.png" alt="POCO F1">
+            <h3>POCO F1 (2018)</h3>
+            <p>Snapdragon 845, gran rendimiento a un precio accesible.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f2.png" alt="POCO F2 Pro">
+            <h3>POCO F2 Pro</h3>
+            <p>Snapdragon 865, pantalla AMOLED, rendimiento premium.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f3.png" alt="POCO F3">
+            <h3>POCO F3</h3>
+            <p>Snapdragon 870, excelente rendimiento y pantalla de 120Hz.</p>
+        </div>
+    </div>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-f3-gt.png" alt="POCO F3 GT">
+            <h3>POCO F3 GT</h3>
+            <p>Dimensity 1200, diseño premium, ideal para gaming.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f4.png" alt="POCO F4">
+            <h3>POCO F4</h3>
+            <p>Snapdragon 870, carga rápida de 67W, ideal para gamers.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f4-gt.png" alt="POCO F4 GT">
+            <h3>POCO F4 GT</h3>
+            <p>Snapdragon 8 Gen 1, 120Hz, rendimiento extremo.</p>
+        </div>
+    </div>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-f5.png" alt="POCO F5">
+            <h3>POCO F5</h3>
+            <p>Snapdragon 7+ Gen 2, pantalla AMOLED curva y diseño de vanguardia.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f5-pro.png" alt="POCO F5 Pro">
+            <h3>POCO F5 Pro</h3>
+            <p>Snapdragon 8+ Gen 1, pantalla AMOLED de 120Hz, rendimiento de gama alta.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f6.png" alt="POCO F6">
+            <h3>POCO F6</h3>
+            <p>Snapdragon 8s Gen 3, cámara de 108MP y pantalla dinámica.</p>
+        </div>
+    </div>
+
+    <div class="plan-content">
+        <div class="plan-1">
+            <img src="imagenes/poco-f6-pro.png" alt="POCO F6 Pro">
+            <h3>POCO F6 Pro</h3>
+            <p>Snapdragon 8 Gen 2, diseño mejorado, cámara profesional.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f7-pro.png" alt="POCO F7 Pro">
+            <h3>POCO F7 Pro</h3>
+            <p>Snapdragon 8 Gen 3, carga rápida de 120W y pantalla AMOLED curva.</p>
+        </div>
+        <div class="plan-1">
+            <img src="imagenes/poco-f7-ultra.png" alt="POCO F7 Ultra">
+            <h3>POCO F7 Ultra</h3>
+            <p>Snapdragon 8 Elite, diseño ultra delgado, rendimiento de nivel flagship.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="index.html" class="btn-1">⬅ Volver al inicio</a>
+        <a href="index.html#series" class="btn-1" style="margin-top: 40px;">← Volver a Series</a>
+    </div>
+</section>
+
+<div class="overlay" id="overlay"></div>
+    <div class="modal-contacto" id="modal-contacto">
+        <p>📧 Correo: contacto@poco.com</p>
+        <p>📞 Teléfono: +52 71 2102 4747</p>
+        <p>📞 Teléfono: +52 71 2272 0687</p>
+        <p>📍 Ubicación: Edo. de México, MX</p>
+        <button id="cerrar-modal">Cerrar</button>
+    </div>
+
+<footer class="footer">
+    <div class="footer-content container">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#series">Series</a>
+        <a href="index.html#historia">Historia</a>
+        <a href="#" id="btn-contacto-footer">Contacto</a>
+    </div>
+</footer>
+
+<script>
+
+    const btnContactoHeader = document.getElementById('btn-contacto-header');
+    const btnContactoFooter = document.getElementById('btn-contacto-footer');
+    const modalContacto = document.getElementById('modal-contacto');
+    const overlay = document.getElementById('overlay');
+    const cerrarModal = document.getElementById('cerrar-modal');
+
+
+    function mostrarModal() {
+        modalContacto.style.display = 'block'; 
+        overlay.style.display = 'block'; 
+    }
+
+    function cerrarModalContacto() {
+        modalContacto.style.display = 'none';
+        overlay.style.display = 'none'; 
+    }
+
+    btnContactoHeader.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        mostrarModal();
+    });
+
+    btnContactoFooter.addEventListener('click', function(e) {
+        e.preventDefault();
+        mostrarModal();
+    });
+
+    cerrarModal.addEventListener('click', function() {
+        cerrarModalContacto();
+    });
+
+    overlay.addEventListener('click', function() {
+        cerrarModalContacto();
+    });
+</script>
+
+</body>
+</html>
